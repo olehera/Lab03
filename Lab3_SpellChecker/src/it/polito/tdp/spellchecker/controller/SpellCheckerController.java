@@ -74,7 +74,7 @@ public class SpellCheckerController {
     		if (s[i].compareTo("")!=0)
     			lista.add(s[i].trim());
     		
-    	List<RichWord> rw = model.spellCheckText(lista);
+    	List<RichWord> rw = model.spellCheckTextDichotomic(lista);
     	
     	for (RichWord temp : rw)
     		if (!temp.isCorretta()) {
