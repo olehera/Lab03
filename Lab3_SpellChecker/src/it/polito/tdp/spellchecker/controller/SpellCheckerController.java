@@ -84,7 +84,7 @@ public class SpellCheckerController {
     	
     	txtResult.appendText(st);
     	lblErr.setText("The text contains "+err+" errors");
-    	lblTime.setText("Spell check completed in "+(System.nanoTime()-t)+" seconds");
+    	lblTime.setText("Spell check completed in "+(System.nanoTime()-t)/1000000000+" seconds");
     }
 
     @FXML

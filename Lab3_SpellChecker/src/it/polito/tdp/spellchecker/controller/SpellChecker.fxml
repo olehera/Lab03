@@ -91,7 +91,7 @@
       </VBox>
    </center>
    <bottom>
-      <Label fx:id="lblTime" prefHeight="17.0" prefWidth="298.0" BorderPane.alignment="TOP_LEFT">
+      <Label fx:id="lblTime" prefHeight="19.0" prefWidth="315.0" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" />
          </BorderPane.margin>

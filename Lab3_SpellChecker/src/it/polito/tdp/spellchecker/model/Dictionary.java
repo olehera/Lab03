@@ -8,8 +8,8 @@ public class Dictionary {
 	private List<String> diz;
 	
 	public Dictionary() {
-		diz = new LinkedList<String>(); 
-	 // diz = new ArrayList<String>();
+	  //  diz = new LinkedList<String>(); 
+	      diz = new ArrayList<String>();
 	}
 
 	public void loadDictionary(String language) {
@@ -64,19 +64,20 @@ public class Dictionary {
 		for (String s : inputTextList) {
 			boolean flag = false;
 			int min = 0;
+			int mediana = 0;
 			int max = diz.size()-1;
 			
-			while (min < max) {
-				int mediana = (min+max)/2;
+			while (min <= max) {
+				mediana = (min+max)/2;
 				
 				if (diz.get(mediana).compareTo(s)==0) {
 					flag = true;
 					break;
 				}
-				else if (diz.get(mediana).compareTo(s) < 0) {
-					max = mediana - 1;
-				} else
-					min = mediana + 1;
+				if (diz.get(mediana).compareTo(s) < 0)
+					min = mediana+1;
+				else
+					max = mediana-1;
 			}
 		    parole.add(new RichWord(s, flag));
 		}
